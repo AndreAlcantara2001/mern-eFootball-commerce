@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-dotenv.config({ path: "../.env" });
+dotenv.config();
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {

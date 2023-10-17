@@ -2,7 +2,7 @@
   "name": "efootballcommerce",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./api/index.js",
   "scripts": {
     "dev": "nodemon index",
     "start": "node index"
