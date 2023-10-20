@@ -48,11 +48,7 @@ const SignUp = () => {
       setLoading(false)
       setError(err.message)
     }
-
-
   }
-
-
 
   return (
     <div className='p-3 max-w-lg mx-auto'>
