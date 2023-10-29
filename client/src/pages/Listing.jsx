@@ -97,8 +97,8 @@ export const Listing = () => {
                 : listing.regularPrice.toLocaleString('en-US')}
               {listing.type === 'rent' && ' / month'}
             </p>
-            <p className='flex items-center mt-6 gap-2 text-slate-600  text-sm'>
-              <FaPhoneAlt className='text-green-700' />
+            <p className='flex items-center gap-2 text-slate-600'>
+              <FaPhoneAlt className='text-green-700 h-4 w-4' />
               {listing.phone}
             </p>
             <div className='flex gap-4'>
