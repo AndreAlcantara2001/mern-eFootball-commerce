@@ -9,6 +9,7 @@ import efotEpic from '../assets/efootballEpic.png'
 import efotPotw from '../assets/efootballPotw.png'
 import efotBigTime from '../assets/efootballBigTime.jpg'
 import efotShowTime from '../assets/efootballshowTime.png'
+import efotLegend from '../assets/efootballLegend.png'
 import {
   FaPhoneAlt,
   FaRegTimesCircle,
@@ -143,6 +144,13 @@ export const Listing = () => {
                 <img src={efotPotw} alt='Potw' className='h-12 w-12 object-contain rounded-lg' />
                 {listing.potws > 0
                   ? `${listing.potws} POTW`
+                  : (<FaRegTimesCircle className='bg-red-500 text-white rounded-lg' />)}
+              </li>
+
+              <li className='flex items-center gap-1 whitespace-nowrap '>
+                <img src={efotLegend} alt='Legend' className='h-12 w-12 object-contain rounded-lg' />
+                {listing.legends > 0
+                  ? `${listing.legends} Legend`
                   : (<FaRegTimesCircle className='bg-red-500 text-white rounded-lg' />)}
               </li>
 
