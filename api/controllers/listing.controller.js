@@ -82,19 +82,29 @@ export const getListings = async (req, res, next) => {
             offer = { $in: [false, true] }
         }
 
-        let furnished = req.query.furnished;
-        if (furnished === undefined || furnished === 'false') {
-            furnished = { $in: [false, true] }
+        let isbigtime = req.query.isbigtime;
+        if (isbigtime === undefined || isbigtime === 'false') {
+            isbigtime = { $in: [false, true] }
         }
 
-        let parking = req.query.parking;
-        if (parking === undefined || parking === 'false') {
-            parking = { $in: [false, true] }
+        let islegend = req.query.islegend;
+        if (islegend === undefined || islegend === 'false') {
+            islegend = { $in: [false, true] }
+        }
+
+        let isepic = req.query.isepic;
+        if (isepic === undefined || isepic === 'false') {
+            isepic = { $in: [false, true] }
+        }
+
+        let isshowtime = req.query.isshowtime;
+        if (isshowtime === undefined || isshowtime === 'false') {
+            isshowtime = { $in: [false, true] }
         }
 
         let type = req.query.type;
         if (type === undefined || type === 'all') {
-            type = { $in: ['sale', 'rent'] }
+            type = { $in: ['sale', 'trade'] }
         }
 
         const searchTerm = req.query.searchTerm || '';
@@ -106,8 +116,10 @@ export const getListings = async (req, res, next) => {
         const listings = await Listing.find({
             name: { $regex: searchTerm, $options: 'i' },
             offer,
-            furnished,
-            parking,
+            isbigtime,
+            islegend,
+            isepic,
+            isshowtime,
             type,
         }).sort(
             { [sort]: order }

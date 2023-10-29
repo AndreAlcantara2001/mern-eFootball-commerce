@@ -10,7 +10,7 @@ const listingSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        address: {
+        phone: {
             type: String,
             required: true
         },
@@ -22,19 +22,40 @@ const listingSchema = new mongoose.Schema(
             type: Number,
             required: true
         },
-        bathrooms: {
+        epics: {
             type: Number,
             required: true
         },
-        bedrooms: {
+        showtimes: {
             type: Number,
             required: true
         },
-        furnished: {
+        potws: {
+            type: Number,
+            required: true
+        },
+        legends: {
+            type: Number,
+            required: true
+        },
+        bigtimes:{
+            type: Number,
+            required: true
+        },
+
+        isbigtime: {
             type: Boolean,
             required: true
         },
-        parking: {
+        islegend: {
+            type: Boolean,
+            required: true
+        },
+        isepic: {
+            type: Boolean,
+            required: true
+        },
+        isshowtime: {
             type: Boolean,
             required: true,
         },
