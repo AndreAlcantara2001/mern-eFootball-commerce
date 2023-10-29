@@ -61,7 +61,7 @@ export default function Home() {
       }
     }
 
-    fetchTradeListings()
+    fetchOfferListings()
   }, [])
 
   return (
