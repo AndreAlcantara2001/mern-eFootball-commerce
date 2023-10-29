@@ -77,14 +77,10 @@ export const getListings = async (req, res, next) => {
         const limit = parseInt(req.query.limit) || 9;
         const startIndex = parseInt(req.query.startIndex) || 0;
 
-        let offer = req.query.offer;
-        if (offer === 'true') {
-            offer = true;
-        } else if (offer === 'false') {
-            offer = false;
-        } else {
-            offer = { $in: [false, true] }
-        }
+        let offer = req.query.offer
+        if (offer === undefined || offer === 'false') {
+            offer = { $in: [false, true] };
+          }
 
         let isbigtime = req.query.isbigtime;
         if (isbigtime === undefined || isbigtime === 'false') {
