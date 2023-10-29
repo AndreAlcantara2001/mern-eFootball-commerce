@@ -26,7 +26,6 @@ export default function Profile() {
   const [showListingsError, setShowListingError] = useState(false)
   const [userListings, setUserListings] = useState([])
 
-  console.log(formData)
 
 
   // firebase storage

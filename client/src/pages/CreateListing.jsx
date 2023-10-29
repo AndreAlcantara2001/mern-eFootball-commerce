@@ -30,7 +30,6 @@ export const CreateListing = () => {
         offer: false,
     })
 
-    console.log(formData)
 
     const [uploading, setUploading] = useState(false)
 
